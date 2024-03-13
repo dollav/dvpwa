@@ -6,10 +6,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: snyk/actions/setup@806182742461562b67788a64410098c9d9b96adb
+        run: pip install -r requirements.txt
+
       - name: Snyk Test
-        run: |
-        pip install -r requirements.txt
-        snyk test --sarif-file-output=snyk-sarif2.json
+        run: snyk test --sarif-file-output=snyk-sarif2.json
         continue-on-error: true
         env:
            SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
