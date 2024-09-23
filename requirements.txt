@@ -9,6 +9,10 @@ pathlib==1.0.1
 google-cloud-storage==2.7.0
 python-dotenv==0.21.0
 opencv-python>=4.8.1.78 
-setuptools==65.5.1
+setuptools==70.0.0
 fonttools>=4.43
 certifi>=2023.7.22
+anyio>=4.4.0 # not directly required, pinned by Snyk to avoid a vulnerability
+requests>=2.32.2 # not directly required, pinned by Snyk to avoid a vulnerability
+urllib3>=2.2.2 # not directly required, pinned by Snyk to avoid a vulnerability
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
